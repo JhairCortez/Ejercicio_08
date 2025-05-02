@@ -1,0 +1,61 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int f, c
+    cout << "ingrese número de filas: "
+    cin >> f
+    cout << "ingrese número de columnas: "
+    cin >> c
+
+    int m[10][10]
+    int i = 0
+    while(i < f)
+    {
+        int j = 0
+        while(j < c)
+        {
+            cout << "m[" << i << "][" << j << "]: "
+            cin >> m[i][j]
+            j++
+        }
+        i++
+    }
+
+    int suma = 0
+    int total = f * c
+
+    i = 0
+    while(i < f)
+    {
+        int j = 0
+        while(j < c)
+        {
+            suma += m[i][j]
+            j++
+        }
+        i++
+    }
+
+    float promedio = (float)suma / total
+    int contador = 0
+
+    i = 0
+    while(i < f)
+    {
+        int j = 0
+        while(j < c)
+        {
+            if(m[i][j] > promedio)
+            {
+                contador++
+            }
+            j++
+        }
+        i++
+    }
+
+    cout << "el promedio es: " << promedio << endl
+    cout << "cantidad de elementos mayores al promedio: " << contador << endl
+      }
